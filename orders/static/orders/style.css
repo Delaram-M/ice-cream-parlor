@@ -1,0 +1,46 @@
+:root {
+    --lavender-floral: #b597f6ff;
+    --pale-cerulean: #96c6eaff;
+}
+
+html, body {
+    margin: 0;
+}
+
+h1 {
+    margin: 0;
+    padding: 1em;
+    height: 1em;
+    text-align: center;
+    background-color: var(--lavender-floral);
+}
+
+.text-box {
+    padding: 1em;
+}
+
+a {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: var(--lavender-floral);
+}
+
+form {
+    text-align: center;
+}
+
+button, input, select, textarea {
+    background-color: var(--pale-cerulean);
+}
+
+button {
+    font-size: larger;
+    background-color: var(--lavender-floral);
+    border-radius: 0.5em;
+    padding: 0.5em;
+    margin: 1em;
+    cursor: pointer;
+}

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Order</title>
+        {% load static %}
+        <link rel="stylesheet" href="{% static 'orders/style.css' %}">
+    </head>
+    <body>
+        <h1>Order</h1>
+
+        <div class="text-box">
+            User ctrl to select multiple flavors. <br>
+            <form method="POST" action="{% url 'orders:submit' %}" >
+            {% csrf_token %}
+            {{ order_form.as_p }}
+            <button type="submit">Submit</button>
+        </form>
+        </div>
+
+    </body>
+</html>
