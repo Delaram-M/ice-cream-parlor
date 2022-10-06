@@ -1,20 +1,22 @@
+import datetime
+
 from django.forms import ModelForm, ChoiceField, SelectMultiple
+from django.utils import timezone
 
 from orders.models import Order, Flavor
 
-PREP_CHOICES = (
-    (15, '15 minutes'),
-    (30, '30 minutes'),
-    (60, '1 hour')
-)
+# TODO move to DB
+PREP_CHOICES = [15, 30, 60]
 
 
 class OrderForm(ModelForm):
     class Meta:
         model = Order
-        exclude = ['pickup_time']
+        fields = '__all__'
         widgets = {
             'flavors': SelectMultiple(attrs={'size': len(Flavor.objects.all())}),
         }
-    pickup_in = ChoiceField(choices=PREP_CHOICES)
 
+    pickup_choices = [timezone.now() + datetime.timedelta(minutes=delta) for delta in PREP_CHOICES]
+    pickup_tuple = tuple(zip(pickup_choices, [choice.strftime("%m/%d/%Y, %H:%M") for choice in pickup_choices]))
+    pickup_time = ChoiceField(choices=pickup_tuple)
