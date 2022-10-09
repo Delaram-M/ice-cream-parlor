@@ -18,5 +18,5 @@ class OrderForm(ModelForm):
         }
 
     pickup_choices = [timezone.now() + datetime.timedelta(minutes=delta) for delta in PREP_CHOICES]
-    pickup_tuple = tuple(zip(pickup_choices, [choice.strftime("%m/%d/%Y, %H:%M") for choice in pickup_choices]))
+    pickup_tuple = tuple(zip(pickup_choices, [choice.strftime("%m/%d, %H:%M") for choice in pickup_choices]))
     pickup_time = ChoiceField(choices=pickup_tuple)
