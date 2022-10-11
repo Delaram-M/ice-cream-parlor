@@ -3,13 +3,15 @@
 {% load crispy_forms_filters %}
 
 {% block title %}
-    Receipt
+    Order Form
 {% endblock %}
 
 {% block content %}
-        <h1>Order</h1>
-        <div>
-            User ctrl to select multiple flavors. <br>
+        <h1>Order Form</h1>
+        <span class="container-fluid">
+            Use <em>ctrl</em> to select multiple flavors. <br>
+        </span>
+        <div class="container-fluid">
             <form method="post">{% csrf_token %}
                 {{ form|crispy }}
                 <input type="submit" value="Save">

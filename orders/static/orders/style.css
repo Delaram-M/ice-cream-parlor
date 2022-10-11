@@ -8,15 +8,9 @@ html, body {
 }
 
 h1 {
-    margin: 0;
     padding: 1em;
-    height: 1em;
     text-align: center;
     background-color: var(--lavender-floral);
-}
-
-.text-box {
-    padding: 1em;
 }
 
 a {
