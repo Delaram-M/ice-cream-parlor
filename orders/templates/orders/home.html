@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Home</title>
-        {% load static %}
-        <link rel="stylesheet" href="{% static 'orders/style.css' %}">
-    </head>
-    <body>
-        <h1>Home</h1>
-        <div class="text-box">
-            Click to choose flavors and pickup time:<br>
-            <a href="{% url 'orders:order_create' %}">
-                Start order
-            </a>
-        </div>
-    </body>
-</html>
+{% extends "base.html" %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <h1>Home</h1>
+    <div>
+        Click to choose flavors and pickup time:<br>
+        <a href="{% url 'orders:order_create' %}">
+            Start order
+        </a>
+    </div>
+{% endblock %}

@@ -1,15 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <title>Receipt</title>
-        {% load static %}
-        <link rel="stylesheet" href="{% static 'orders/style.css' %}">
-    </head>
-    <body>
+{% extends "base.html" %}
+
+{% block title %}
+    Receipt
+{% endblock %}
+
+{% block content %}
         <h1>Receipt</h1>
-        <div class="text-box">
+        <div>
             Your order was submitted.
         </div>
-    </body>
-</html>
+{% endblock %}
