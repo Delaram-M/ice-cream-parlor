@@ -22,9 +22,6 @@ a:hover {
     color: var(--lavender-floral);
 }
 
-.btn {
-    background-color: var(--lavender-floral);
-}
 
 .textinput, .selectmultiple, .select {
     background-color: var(--pale-cerulean);
@@ -43,6 +40,8 @@ input[type=submit] {
 
 }
 
-.buttonHolder {
-    text-align: center;
+.btn-custom {
+    --bs-btn-bg: var(--pale-cerulean);
+    --bs-btn-hover-border-color: black;
+    margin-top: 0.4em;
 }
