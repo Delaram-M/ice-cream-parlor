@@ -21,3 +21,28 @@ a:hover {
     text-decoration: none;
     color: var(--lavender-floral);
 }
+
+.btn {
+    background-color: var(--lavender-floral);
+}
+
+.textinput, .selectmultiple, .select {
+    background-color: var(--pale-cerulean);
+}
+
+input[type=submit] {
+    background-color: var(--lavender-floral);
+    border-radius: 0.4em;
+    padding: 0.4em;
+    cursor: pointer;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%, 0);
+    margin-bottom: 1em;
+    width: 10em;
+
+}
+
+.buttonHolder {
+    text-align: center;
+}
