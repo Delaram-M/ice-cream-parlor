@@ -6,7 +6,12 @@
 
 {% block content %}
         <h1>Receipt</h1>
+        {% if request.session.customer_name %}
         <div class="container-fluid">
-            Your order was submitted.
+            Your order was submitted. <br><br>
+            Name: {{ request.session.customer_name }} <br>
+            Flavors: {{ request.session.flavors }} <br>
+            Pickup time: {{ request.session.pickup_time }}
         </div>
+        {% endif %}
 {% endblock %}
