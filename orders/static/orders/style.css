@@ -57,3 +57,7 @@ img {
     margin: 1em;
     display: inline;
 }
+
+.table-custom {
+    background-color: var(--pale-cerulean);
+}
