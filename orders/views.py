@@ -1,10 +1,14 @@
 from datetime import datetime
 
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.views.generic.edit import CreateView
 
 from orders.forms import OrderForm
 from .models import Order
+
+
+def home_redirect(request):
+    return redirect('orders:home')
 
 
 def home(request):
