@@ -1,3 +1,5 @@
+from datetime import datetime
+
 from django.shortcuts import render
 from django.views.generic.edit import CreateView
 
@@ -15,9 +17,11 @@ class OrderCreateView(CreateView):
 
     def form_valid(self, form):
         response = super(OrderCreateView, self).form_valid(form)
-        self.request.session['customer_name'] = str(form.cleaned_data['customer_name'])
+        self.request.session['customer_name'] = form.cleaned_data['customer_name']
         self.request.session['flavors'] = str([flavor.name for flavor in form.cleaned_data['flavors']])[1:-1]
-        self.request.session['pickup_time'] = str(form.cleaned_data['pickup_time'])[5:16]
+        formatted_pickup_time = datetime.strptime(form.cleaned_data['pickup_time'],
+                                                  "%Y-%m-%d %H:%M:%S.%f%z").strftime("%m/%d, %H:%M")
+        self.request.session['pickup_time'] = formatted_pickup_time
         return response
 
 
