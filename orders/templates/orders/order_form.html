@@ -12,7 +12,7 @@
             Use <em>ctrl</em> to select multiple flavors. <br>
         </span>
         <div class="container-fluid">
-            <form method="post">{% csrf_token %}
+            <form method="post" method="post" autocomplete="off"> {% csrf_token %}
                 {{ form|crispy }}
                 <input type="submit" value="Submit">
             </form>
