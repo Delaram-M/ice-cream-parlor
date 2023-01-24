@@ -1,7 +1,7 @@
 # Ice Cream Parlor
 
 This website is designed to be used by an ice cream parlor.
-Users can order an ice cream (flavors and pickup time). Admins
+Users can order ice cream (flavors and pickup time). Admins
 can view orders, change pickup times and flavors.
 
 User interface: domain </br>
