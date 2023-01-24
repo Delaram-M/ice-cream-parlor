@@ -13,6 +13,7 @@
        python manage.py loaddata flavor.json
        python manage.py loaddata prepduration.json
 
+## Administration
 project's user interface: domain </br>
 project's admin interface: domain/admin
 
