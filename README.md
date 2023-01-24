@@ -1,6 +1,6 @@
 # Ice Cream Parlor
 
-This simple website is designed to be used by an ice cream parlor
+This django website is designed to be used by an ice cream parlor
 to take online orders.
 Customers can order ice cream providing name, phone number,
 desired flavors and pickup time. 
