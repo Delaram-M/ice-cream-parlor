@@ -1,7 +1,14 @@
 # Ice Cream Parlor
 
+This website is designed to be used by an ice cream parlor.
+Users can order an ice cream (flavors and pickup time). Admins
+can view orders, change pickup times and flavors.
+
+User interface: domain </br>
+Admin interface: domain/admin
+
 ## How to Run
-1. Create an ".env" file containing SECRET_KEY and HOSTS
+1. Create an ".env" file containing SECRET_KEY and HOST
 
 
 2. Install requirements:
@@ -12,8 +19,4 @@
 
        python manage.py loaddata flavor.json
        python manage.py loaddata prepduration.json
-
-## Administration
-project's user interface: domain </br>
-project's admin interface: domain/admin
 
