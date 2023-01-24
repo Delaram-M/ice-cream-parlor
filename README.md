@@ -1,10 +1,12 @@
 # Ice Cream Parlor
 
-This website is designed to be used by an ice cream parlor.
-Users can order ice cream (flavors and pickup time). Admins
-can view orders, change pickup times and flavors.
+This simple website is designed to be used by an ice cream parlor
+to take online orders.
+Customers can order ice cream providing name, phone number,
+desired flavors and pickup time. 
+Admins can view orders' details, change pickup times and flavors.
 
-User interface: domain </br>
+Customer interface: domain <br>
 Admin interface: domain/admin
 
 ## How to Run
@@ -19,4 +21,9 @@ Admin interface: domain/admin
 
        python manage.py loaddata flavor.json
        python manage.py loaddata prepduration.json
+
+4. Create the first admin:
+
+       python manage.py createsuperuser
+
 
