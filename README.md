@@ -9,20 +9,20 @@ Admins can view orders' details, change pickup times and flavors.
 Customer interface: domain <br>
 Admin interface: domain/admin
 
-## Requirements
+## How to Prepare the Project
 
-- Creating an ".env" file containing SECRET_KEY and HOST
+- Create an ".env" file containing SECRET_KEY and HOST
 
-- Installing "requirements.txt":
+- Install "requirements.txt":
 
-       install -r requirements.txt
+       pip install -r requirements.txt
 
-- Filling database with fixtures:
+- Prepopulate database with fixtures:
 
        python manage.py loaddata flavor.json
        python manage.py loaddata prepduration.json
 
-- Creating the first admin:
+- Create the first admin:
 
        python manage.py createsuperuser
 
