@@ -1,6 +1,6 @@
 # Ice Cream Parlor
 
-## How to Run:
+## How to Run
 1. Create an ".env" file containing SECRET_KEY and HOSTS
 
 
@@ -13,6 +13,5 @@
        python manage.py loaddata flavor.json
        python manage.py loaddata prepduration.json
 
-project's user interface: domain </br>
-project's admin interface: domain/admin
+admin interface can be found at www.'domain'\admin
 
