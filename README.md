@@ -1,6 +1,6 @@
 # Ice Cream Parlor
 
-## How to Run:
+## How to Run
 1. Create an ".env" file containing SECRET_KEY and HOSTS
 
 
